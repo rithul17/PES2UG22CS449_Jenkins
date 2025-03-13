@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                build 'PES2UG22CS449'
+		sh 'g++ hello.cpp -o output'
+            }
+        }
+	stage('Test'){
+		steps{
+		sh './ouput'
+		}
+	}
+	stage('Deploy'){
+		echo 'deployed by the king'
+	}
+
+    }
+    post{
+	failure{
+		error 'pipeline has failed king, time to fix'
+	}
+    }
+}
+
