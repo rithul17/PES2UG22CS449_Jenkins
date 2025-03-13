@@ -1,7 +1,7 @@
 #include <iostream>
-using namespace std;
 
-int main(void) {
-  cout << "pipeline testing \n";
-  return 0;
+int main() {
+    std::cout << "Hello Jenkins Pipeline!" << std::endl;
+    std::cout << "This is a test C++ program for PES2UG22CS449" << std::endl;
+    return 0;
 }
